@@ -1622,7 +1622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7de474d596905a64a870b3edb324a636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accelTime: 74.5400009
+  accelTime: 2.05999994
 --- !u!146 &14600000
 WheelCollider:
   m_ObjectHideFlags: 1

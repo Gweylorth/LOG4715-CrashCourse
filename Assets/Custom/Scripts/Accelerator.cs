@@ -8,12 +8,10 @@ public class Accelerator : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.LogWarning("Colliding");
         Accelerable accelerable = other.GetComponentInParent<Accelerable>();
         if (accelerable)
         {
-            Debug.LogWarning("Accelerate !");
-            accelerable.Accelerate(this.speedFactor);
+            StartCoroutine(accelerable.Accelerate(this.speedFactor));
         }
     }
 }

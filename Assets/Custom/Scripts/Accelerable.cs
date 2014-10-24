@@ -7,6 +7,7 @@ public class Accelerable : MonoBehaviour {
     private CarController carController;
     private float baseSpeed;
     private float baseTorque;
+    private bool accelerating = false;
 
     public float accelTime = 2;
 
@@ -22,12 +23,25 @@ public class Accelerable : MonoBehaviour {
 	
 	}
 
-    public IEnumerable Accelerate(float speedFactor)
+    public IEnumerator Accelerate(float speedFactor)
     {
-        this.carController.MaxSpeed = this.baseSpeed * speedFactor;
+        Debug.LogWarning("Before :" + this.carController.MaxTorque);
+        if (this.accelerating)
+        {
+            yield return new WaitForSeconds(0);
+        }
+
+        this.accelerating = true;
+        this.carController.MaxSpeed = this.baseSpeed * speedFactor * 2;
         this.carController.MaxTorque = this.baseTorque * speedFactor;
+        Debug.LogWarning("After accel :" + this.carController.MaxTorque);
+        
         yield return new WaitForSeconds(this.accelTime);
+
         this.carController.MaxSpeed = this.baseSpeed;
         this.carController.MaxTorque = this.baseTorque;
+        this.accelerating = false;
+
+        Debug.LogWarning("After wait :" + this.carController.MaxTorque);
     }
 }

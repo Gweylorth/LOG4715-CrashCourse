@@ -16,6 +16,7 @@ GameObject:
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400000}
   - 114: {fileID: 11400030}
+  - 114: {fileID: 11400032}
   m_Layer: 8
   m_Name: AI Waypoint-Based Car
   m_TagString: Player
@@ -1659,6 +1660,18 @@ MonoBehaviour:
   - {fileID: 100038}
   - {fileID: 100032}
   childrenOfThisObject: 0
+--- !u!114 &11400032
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7de474d596905a64a870b3edb324a636, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  accelTime: 2
 --- !u!146 &14600000
 WheelCollider:
   m_ObjectHideFlags: 1
