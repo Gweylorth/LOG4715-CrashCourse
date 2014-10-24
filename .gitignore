@@ -1,0 +1,11 @@
+*.sln
+*.userprefs
+*.csproj
+*.pidb
+*.unityproj
+/Library/FailedAssetImports.txt
+/Library/cache/
+/Library/previews/
+/Library/ScriptAssemblies
+/obj
+/Temp
