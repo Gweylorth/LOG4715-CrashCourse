@@ -19446,6 +19446,7 @@ GameObject:
   - 33: {fileID: 1052194672}
   - 23: {fileID: 1052194671}
   - 65: {fileID: 1052194673}
+  - 114: {fileID: 1052194674}
   - 65: {fileID: 1052194670}
   m_Layer: 0
   m_Name: Pillar 2x8x2
@@ -19520,6 +19521,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.99999881, y: 8, z: 1.99999976}
   m_Center: {x: 6.2584877e-07, y: 4, z: 1.49011612e-07}
+--- !u!114 &1052194674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 44884af1ac1d64d42902da40268ba120,
+    type: 2}
+  m_PrefabInternal: {fileID: 2067126436}
+  m_GameObject: {fileID: 1052194668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8163c46bbcf319e4cbc04472cf8cf081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthPoints: 5
 --- !u!1 &1052350985
 GameObject:
   m_ObjectHideFlags: 0
@@ -32912,6 +32926,7 @@ GameObject:
   - 33: {fileID: 1804739142}
   - 23: {fileID: 1804739141}
   - 65: {fileID: 1804739143}
+  - 114: {fileID: 1804739144}
   - 65: {fileID: 1804739140}
   m_Layer: 0
   m_Name: Pillar 2x8x2
@@ -32986,6 +33001,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.99999881, y: 8, z: 1.99999976}
   m_Center: {x: 6.2584877e-07, y: 4, z: 1.49011612e-07}
+--- !u!114 &1804739144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 44884af1ac1d64d42902da40268ba120,
+    type: 2}
+  m_PrefabInternal: {fileID: 1886936159}
+  m_GameObject: {fileID: 1804739138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8163c46bbcf319e4cbc04472cf8cf081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthPoints: 5
 --- !u!1 &1806963580
 GameObject:
   m_ObjectHideFlags: 0
@@ -36806,6 +36834,7 @@ GameObject:
   - 33: {fileID: 1972544824}
   - 23: {fileID: 1972544823}
   - 65: {fileID: 1972544825}
+  - 114: {fileID: 1972544826}
   - 65: {fileID: 1972544822}
   m_Layer: 0
   m_Name: Pillar 2x8x2
@@ -36880,6 +36909,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.99999881, y: 8, z: 1.99999976}
   m_Center: {x: 6.2584877e-07, y: 4, z: 1.49011612e-07}
+--- !u!114 &1972544826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 44884af1ac1d64d42902da40268ba120,
+    type: 2}
+  m_PrefabInternal: {fileID: 1496975262}
+  m_GameObject: {fileID: 1972544820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8163c46bbcf319e4cbc04472cf8cf081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthPoints: 5
 --- !u!1 &1975245199
 GameObject:
   m_ObjectHideFlags: 0
@@ -39321,6 +39363,7 @@ GameObject:
   - 33: {fileID: 2090683123}
   - 23: {fileID: 2090683122}
   - 65: {fileID: 2090683124}
+  - 114: {fileID: 2090683125}
   - 65: {fileID: 2090683121}
   m_Layer: 0
   m_Name: Pillar 2x8x2
@@ -39395,6 +39438,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.99999881, y: 8, z: 1.99999976}
   m_Center: {x: 6.2584877e-07, y: 4, z: 1.49011612e-07}
+--- !u!114 &2090683125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 44884af1ac1d64d42902da40268ba120,
+    type: 2}
+  m_PrefabInternal: {fileID: 1165087733}
+  m_GameObject: {fileID: 2090683119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8163c46bbcf319e4cbc04472cf8cf081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthPoints: 5
 --- !u!1 &2099699816
 GameObject:
   m_ObjectHideFlags: 0
