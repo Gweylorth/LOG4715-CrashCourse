@@ -3,26 +3,32 @@ using System.Collections.Generic;
 
 public class CheckpointManager : MonoBehaviour 
 {
-
+	
+	public GUIText lapsText;
+	
 	[SerializeField]
 	private GameObject _carContainer;
-
+	
 	[SerializeField]
 	private int _checkPointCount;
 	[SerializeField]
 	private int _totalLaps;
-
+	
 	private bool _finished = false;
 	
 	private Dictionary<CarController,PositionData> _carPositions = new Dictionary<CarController, PositionData>();
-
+	
 	private class PositionData
 	{
 		public int lap;
 		public int checkPoint;
 		public int position;
 	}
-
+	
+	void Start(){
+		lapsText.text = "Tour 1/" + _totalLaps;
+	}
+	
 	// Use this for initialization
 	void Awake () 
 	{
@@ -34,9 +40,9 @@ public class CheckpointManager : MonoBehaviour
 	
 	public void CheckpointTriggered(CarController car, int checkPointIndex)
 	{
-
+		
 		PositionData carData = _carPositions[car];
-
+		
 		if (!_finished)
 		{
 			if (checkPointIndex == 0)
@@ -48,9 +54,10 @@ public class CheckpointManager : MonoBehaviour
 					Debug.Log(car.name + " lap " + carData.lap);
 					if (IsPlayer(car))
 					{
+						lapsText.text = "Tour " + (carData.lap+1) + "/" + _totalLaps;
 						GetComponent<RaceManager>().Announce("Tour " + (carData.lap+1).ToString());
 					}
-
+					
 					if (carData.lap >= _totalLaps)
 					{
 						_finished = true;
@@ -63,10 +70,10 @@ public class CheckpointManager : MonoBehaviour
 				carData.checkPoint = checkPointIndex;
 			}
 		}
-
-
+		
+		
 	}
-
+	
 	bool IsPlayer(CarController car)
 	{
 		return car.GetComponent<CarUserControlMP>() != null;
