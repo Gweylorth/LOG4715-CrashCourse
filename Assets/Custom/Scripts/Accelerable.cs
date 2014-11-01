@@ -17,11 +17,6 @@ public class Accelerable : MonoBehaviour {
         this.baseSpeed = this.carController.MaxSpeed;
         this.baseTorque = this.carController.MaxTorque;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
     public IEnumerator Accelerate(float speedFactor)
     {

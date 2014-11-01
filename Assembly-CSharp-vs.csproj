@@ -55,6 +55,9 @@
      <Compile Include="Assets\Custom\Scripts\Accelerable.cs" />
      <Compile Include="Assets\Custom\Scripts\Accelerator.cs" />
      <Compile Include="Assets\Custom\Scripts\Destructible.cs" />
+     <Compile Include="Assets\Custom\Scripts\Healable.cs" />
+     <Compile Include="Assets\Custom\Scripts\Healing.cs" />
+     <Compile Include="Assets\Custom\Scripts\Rotator.cs" />
      <Compile Include="Assets\Custom\Scripts\SpeedText.cs" />
      <Compile Include="Assets\Sample Assets\2D\Scripts\Camera2DFollow.cs" />
      <Compile Include="Assets\Sample Assets\2D\Scripts\CameraFollow.cs" />
@@ -151,6 +154,7 @@
      <Compile Include="Assets\Sample Assets\Vehicles\Rolling Ball\Scripts\BallUserControl.cs" />
      <None Include="Assets\Sample Assets\Effects\Toon Shading\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Sample Assets\Prototyping\Shaders\WorldCoord Diffuse.shader" />
+     <None Include="Assets\Boltset\readme.txt" />
      <None Include="Assets\Sample Assets\Effects\Light Shafts\Shaders\SamplePositions.shader" />
      <None Include="Assets\Sample Assets\Effects\Image Effects (Pro Only)\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />
      <None Include="Assets\Sample Assets\Effects\Tessellation Shaders\Shaders\BumpedSpecularSmooth.shader" />
