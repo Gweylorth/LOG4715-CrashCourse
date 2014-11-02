@@ -8943,9 +8943,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 481286549}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed5dc5bf233de384ea657c53ce437959, type: 3}
+  m_Script: {fileID: 11500000, guid: 8163c46bbcf319e4cbc04472cf8cf081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthPoints: 50
+  maxHealthPoints: 50
 --- !u!1 &487389443
 GameObject:
   m_ObjectHideFlags: 0
@@ -18697,7 +18699,7 @@ GameObject:
   - 4: {fileID: 979958164}
   - 132: {fileID: 979958165}
   m_Layer: 0
-  m_Name: PVText
+  m_Name: HPText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18978,9 +18980,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 981142452}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed5dc5bf233de384ea657c53ce437959, type: 3}
+  m_Script: {fileID: 11500000, guid: 8163c46bbcf319e4cbc04472cf8cf081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthPoints: 50
+  maxHealthPoints: 50
 --- !u!1 &982943094
 GameObject:
   m_ObjectHideFlags: 0
@@ -26233,6 +26237,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1305879589}
   - 114: {fileID: 1305879590}
+  - 114: {fileID: 1305879591}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -26270,6 +26275,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedText: {fileID: 2077125165}
+--- !u!114 &1305879591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1305879588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68177b950ac351a4abc77a6b43f270af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hpText: {fileID: 979958165}
 --- !u!1 &1316483489
 GameObject:
   m_ObjectHideFlags: 0
@@ -27203,9 +27220,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1368033979}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed5dc5bf233de384ea657c53ce437959, type: 3}
+  m_Script: {fileID: 11500000, guid: 8163c46bbcf319e4cbc04472cf8cf081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthPoints: 50
+  maxHealthPoints: 50
 --- !u!1 &1371417689
 GameObject:
   m_ObjectHideFlags: 0
@@ -29764,6 +29783,10 @@ Prefab:
       propertyPath: m_Interpolate
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 13500000, guid: a7cc722c963898847b9b85aefcc50587, type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a7cc722c963898847b9b85aefcc50587, type: 2}
   m_RootGameObject: {fileID: 1664095916}
@@ -31059,9 +31082,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1635867382}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed5dc5bf233de384ea657c53ce437959, type: 3}
+  m_Script: {fileID: 11500000, guid: 8163c46bbcf319e4cbc04472cf8cf081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthPoints: 50
+  maxHealthPoints: 50
 --- !u!1 &1636046887
 GameObject:
   m_ObjectHideFlags: 0
@@ -34884,9 +34909,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1881066731}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed5dc5bf233de384ea657c53ce437959, type: 3}
+  m_Script: {fileID: 11500000, guid: 8163c46bbcf319e4cbc04472cf8cf081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthPoints: 50
+  maxHealthPoints: 50
 --- !u!1 &1885422050
 GameObject:
   m_ObjectHideFlags: 0
@@ -37647,9 +37674,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1977983683}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed5dc5bf233de384ea657c53ce437959, type: 3}
+  m_Script: {fileID: 11500000, guid: 8163c46bbcf319e4cbc04472cf8cf081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthPoints: 50
+  maxHealthPoints: 50
 --- !u!1 &1988760123
 GameObject:
   m_ObjectHideFlags: 0
@@ -39048,9 +39077,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2042105150}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed5dc5bf233de384ea657c53ce437959, type: 3}
+  m_Script: {fileID: 11500000, guid: 8163c46bbcf319e4cbc04472cf8cf081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthPoints: 50
+  maxHealthPoints: 50
 --- !u!1 &2047550981
 GameObject:
   m_ObjectHideFlags: 0
@@ -40157,9 +40188,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2099699816}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed5dc5bf233de384ea657c53ce437959, type: 3}
+  m_Script: {fileID: 11500000, guid: 8163c46bbcf319e4cbc04472cf8cf081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthPoints: 50
+  maxHealthPoints: 50
 --- !u!1001 &2099877694
 Prefab:
   m_ObjectHideFlags: 0

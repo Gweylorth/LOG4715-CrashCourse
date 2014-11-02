@@ -1681,9 +1681,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed5dc5bf233de384ea657c53ce437959, type: 3}
+  m_Script: {fileID: 11500000, guid: 8163c46bbcf319e4cbc04472cf8cf081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthPoints: 50
+  maxHealthPoints: 50
 --- !u!146 &14600000
 WheelCollider:
   m_ObjectHideFlags: 1

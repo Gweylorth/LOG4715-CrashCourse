@@ -9,7 +9,7 @@ public class Healing : MonoBehaviour {
 	
 	void OnTriggerEnter(Collider other)
 	{
-		Healable heal = other.GetComponentInParent<Healable>();
+		Destructible heal = other.GetComponentInParent<Destructible>();
 		if (heal)
 		{
 			heal.healing(this.HP);
