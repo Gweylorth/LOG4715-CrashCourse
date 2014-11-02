@@ -13,12 +13,12 @@ public class Healing : MonoBehaviour {
 		if (heal)
 		{
 			heal.healing(this.HP);
+			gameObject.SetActive(false);
 			StartCoroutine(Delay ());
 		}
 	}
 	
 	IEnumerator Delay() {
-		gameObject.SetActive(false);
 		yield return new WaitForSeconds(spawnTime);
 		gameObject.SetActive(true);
 	}

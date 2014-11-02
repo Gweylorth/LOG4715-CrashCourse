@@ -8902,6 +8902,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccf05cb758fa6ad40b25b08af07b77c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedFactor: 2
   vertical: Vertical
   horizontal: Horizontal
 --- !u!54 &481286557
@@ -29755,6 +29756,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: a7cc722c963898847b9b85aefcc50587, type: 2}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400000, guid: a7cc722c963898847b9b85aefcc50587, type: 2}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a7cc722c963898847b9b85aefcc50587, type: 2}
   m_RootGameObject: {fileID: 1664095916}
@@ -37560,6 +37569,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccf05cb758fa6ad40b25b08af07b77c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedFactor: 2
   vertical: Vertical2
   horizontal: Horizontal2
 --- !u!114 &1977983690
