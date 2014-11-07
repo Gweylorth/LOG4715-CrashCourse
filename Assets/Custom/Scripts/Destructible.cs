@@ -35,7 +35,6 @@ public class Destructible : MonoBehaviour {
 		} else {
 			this.healthPoints = this.maxHealthPoints;
 		}
-	}
-
+    }
 
 }
