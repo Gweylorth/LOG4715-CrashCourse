@@ -29,7 +29,9 @@ public class Explosive : MonoBehaviour {
 						Instantiate(explosionPrefab, col.contacts[0].point, Quaternion.LookRotation( col.contacts[0].normal ));
 						exploded = true;
 
-						SendMessage ("Immobilize");
+						//SendMessage ("Immobilize");
+
+                        this.gameObject.SetActive(false);
 
 						if (reset)
 						{

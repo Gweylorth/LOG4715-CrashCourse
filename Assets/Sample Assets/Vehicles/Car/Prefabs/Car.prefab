@@ -1635,6 +1635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8163c46bbcf319e4cbc04472cf8cf081, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 400010, guid: 031d08f52af1daa4f929b85221519426, type: 2}
   healthPoints: 50
   maxHealthPoints: 50
 --- !u!146 &14600000

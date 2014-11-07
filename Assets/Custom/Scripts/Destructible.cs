@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Destructible : MonoBehaviour {
 
+    public Transform explosionPrefab;
 	public int healthPoints = 50;
 	public int maxHealthPoints = 50;
 
@@ -21,7 +22,8 @@ public class Destructible : MonoBehaviour {
 		}
 
 		if(this.healthPoints == 0){
-            this.gameObject.AddComponent<Explosive>();
+            Explosive explosive = this.gameObject.AddComponent<Explosive>();
+            explosive.explosionPrefab = explosionPrefab;
             return;
         }
 	}

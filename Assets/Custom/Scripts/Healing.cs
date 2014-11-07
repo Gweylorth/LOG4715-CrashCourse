@@ -2,24 +2,27 @@
 using System.Collections;
 
 [RequireComponent(typeof(SphereCollider))]
-public class Healing : MonoBehaviour {
+public class Healing : MonoBehaviour
+{
 	
-	public float spawnTime = 2;
-	public int HP;
+		public float spawnTime = 2;
+		public int HP;
 	
-	void OnTriggerEnter(Collider other)
-	{
-		Destructible heal = other.GetComponentInParent<Destructible>();
-		if (heal)
+		void OnTriggerEnter (Collider other)
 		{
-			heal.healing(this.HP);
-			gameObject.SetActive(false);
-			StartCoroutine(Delay ());
+				if (renderer.enabled) {
+						Destructible heal = other.GetComponentInParent<Destructible> ();
+						if (heal) {
+								renderer.enabled = false;
+								heal.healing (this.HP);
+								StartCoroutine (Delay ());
+						}
+				}
 		}
-	}
-	
-	IEnumerator Delay() {
-		yield return new WaitForSeconds(spawnTime);
-		gameObject.SetActive(true);
-	}
+
+		IEnumerator Delay ()
+		{
+				yield return new WaitForSeconds (spawnTime);
+				renderer.enabled = true;
+		}
 }
