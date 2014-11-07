@@ -14,11 +14,16 @@ public class Destructible : MonoBehaviour {
 		}
 
         int velocity = Mathf.FloorToInt(collision.relativeVelocity.magnitude / 10);
-        this.healthPoints -= velocity;
-        offender.healthPoints -= velocity;
-
-        if (this.healthPoints < 0) {
+		
+		if (this.healthPoints - velocity < 0) {
 			this.healthPoints = 0;
+		} else{
+			this.healthPoints -= velocity;
+		}
+		if (offender.healthPoints - velocity < 0) {
+			offender.healthPoints = 0;
+		} else{
+			offender.healthPoints -= velocity;
 		}
 
 		if(this.healthPoints == 0){
@@ -36,5 +41,4 @@ public class Destructible : MonoBehaviour {
 			this.healthPoints = this.maxHealthPoints;
 		}
     }
-
 }
