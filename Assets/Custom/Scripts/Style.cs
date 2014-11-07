@@ -9,6 +9,12 @@ public class Style : MonoBehaviour {
 	private float seuilMaxSpeed;
 	private int points;
 	private bool frolage;
+	private int cptPoints;
+	
+	public int CptPoints
+	{
+		set { this.cptPoints = value; }
+	}
 
 	public GUIText textPoint;
 	public float factorMinSpeed;
@@ -20,7 +26,8 @@ public class Style : MonoBehaviour {
 	public int ajoutExplosion;
 
 	void Start() {
-		this.points = 0;	
+		this.points = 0;
+		this.cptPoints = 0;
 		this.car = this.GetComponentInParent<CarController>();
 		this.seuilMinSpeed = this.car.MaxSpeed * this.factorMinSpeed;
 		this.seuilMaxSpeed = this.car.MaxSpeed * this.factorMaxSpeed;
@@ -43,18 +50,32 @@ public class Style : MonoBehaviour {
 		if (this.car.CurrentSpeed >= this.seuilMinSpeed) {
 			if (frolage) {
 				this.points += this.ajoutFrolage;
+				this.cptPoints += this.ajoutFrolage;
 			}
 			if(!this.car.AnyOnGround) {
 				this.points += this.ajoutEnLAir;
+				this.cptPoints += this.ajoutEnLAir;
 			}
 		}
 		if (this.car.CurrentSpeed >= this.seuilMaxSpeed) {
 			this.points += this.ajoutVitesseFolle;
+			this.cptPoints += this.ajoutVitesseFolle;
 		}
 		this.textPoint.text = "Score : " + this.points;
+
+
+
+		if(this.cptPoints > 1000) {
+			this.cptPoints -= 1000;
+			Boost carBoost = this.gameObject.GetComponentInParent<Boost>();
+			if(carBoost) {
+				carBoost.AddBoost();
+			}
+		}
 	}
 
 	public void AddExplosionPoints() {
 		this.points += this.ajoutExplosion;
+		this.cptPoints += this.ajoutExplosion;
 	}
 }

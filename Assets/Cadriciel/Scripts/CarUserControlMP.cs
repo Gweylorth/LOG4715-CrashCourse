@@ -4,21 +4,23 @@ using UnityEngine;
 public class CarUserControlMP : MonoBehaviour
 {
 	private CarController car;  // the car controller we want to use
-	private bool nitro;
+	private bool boost = false;
 	
 	public float speedFactor;
 
 	[SerializeField]
 	private string vertical = "Vertical";
-
+	
 	[SerializeField]
 	private string horizontal = "Horizontal";
+	
+	[SerializeField]
+	private string jump = "Jump";
 	
 	void Awake ()
 	{
 		// get the car controller
 		car = GetComponent<CarController>();
-		nitro = false;
 	}
 
 	void FixedUpdate()
@@ -33,13 +35,22 @@ public class CarUserControlMP : MonoBehaviour
 		#endif
 		car.Move(h,v);
 
-		if (Input.GetButton ("Jump")) {
-			if (!nitro) {
-				nitro = true;
-				this.car.Boost (speedFactor);
+		if (Input.GetButton (jump)) {
+			if (!boost) {
+				Boost carBoost = this.gameObject.GetComponent<Boost>();
+				if(carBoost) {
+					if(carBoost.NbBoost > 0) {
+						boost = true;
+						carBoost.SubBoost();
+						this.car.Boost (speedFactor);
+												
+						Style carStyle = this.gameObject.GetComponentInChildren<Style>();
+						carStyle.CptPoints = 0;
+					}
+				}
 			}
 		} else {
-			nitro = false;
+			boost = false;
 		}
 	}
 }

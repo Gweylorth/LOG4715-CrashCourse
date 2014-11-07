@@ -4,7 +4,8 @@ using System.Collections.Generic;
 public class CheckpointManager : MonoBehaviour 
 {
 	
-	public GUIText lapsText;
+	public GUIText lapsTextP1;
+	public GUIText lapsTextP2;
 	
 	[SerializeField]
 	private GameObject _carContainer;
@@ -26,7 +27,8 @@ public class CheckpointManager : MonoBehaviour
 	}
 	
 	void Start(){
-		lapsText.text = "Tour 1/" + _totalLaps;
+		lapsTextP1.text = "Tour 1/" + _totalLaps;
+		lapsTextP2.text = "Tour 1/" + _totalLaps;
 	}
 	
 	// Use this for initialization
@@ -54,7 +56,12 @@ public class CheckpointManager : MonoBehaviour
 					Debug.Log(car.name + " lap " + carData.lap);
 					if (IsPlayer(car))
 					{
-						lapsText.text = "Tour " + (carData.lap+1) + "/" + _totalLaps;
+						if(car.gameObject.name == "Joueur 1") {							
+							lapsTextP1.text = "Tour " + (carData.lap+1) + "/" + _totalLaps;
+						}
+						else if(car.gameObject.name == "Joueur 2") {							
+							lapsTextP2.text = "Tour " + (carData.lap+1) + "/" + _totalLaps;
+						}
 						GetComponent<RaceManager>().Announce("Tour " + (carData.lap+1).ToString());
 					}
 					

@@ -3,21 +3,30 @@ using System.Collections;
 
 public class SpeedText : MonoBehaviour
 {
-	public GUIText speedText;
+	public GUIText speedTextP1;
+	public GUIText speedTextP2;
 
 	// Update is called once per frame
 	void Update ()
 	{
-        GameObject go = GameObject.Find("Joueur 1");
-        if (!go)
-        {
-            return;
-        }
-		CarController player = go.GetComponent<CarController> ();
-        if (!player)
-        {
-            return;
-        }
-		speedText.text = ((int)player.CurrentSpeed).ToString () + " km/h";
+		GameObject goP1 = GameObject.Find("Joueur 1");
+		if (goP1)
+		{
+			CarController playerP1 = goP1.GetComponent<CarController>();
+			if (playerP1)
+			{
+				speedTextP1.text = ((int)playerP1.CurrentSpeed).ToString () + " km/h";
+			}
+		}
+		
+		GameObject goP2 = GameObject.Find("Joueur 2");
+		if (goP2)
+		{
+			CarController playerP2 = goP2.GetComponent<CarController>();
+			if (playerP2)
+			{
+				speedTextP2.text = ((int)playerP2.CurrentSpeed).ToString () + " km/h";
+			}
+		}
 	}
 }
