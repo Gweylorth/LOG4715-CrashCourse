@@ -8,11 +8,14 @@ public class ObjectResetter : MonoBehaviour {
 	Quaternion originalRotation;
 	List<Transform> originalStructure;
 
+    public List<bool> SectionsPresence { get; set; } 
+
 	// Use this for initialization
 	void Start () {
 		originalStructure = new List<Transform>(GetComponentsInChildren<Transform>());
 		originalPosition = transform.position;
 		originalRotation = transform.rotation;
+        this.SectionsPresence = new List<bool> { true };
 	}
 
 	public void DelayedReset (float delay) {
