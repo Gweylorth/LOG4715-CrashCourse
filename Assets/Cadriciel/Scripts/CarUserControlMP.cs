@@ -4,10 +4,9 @@ using UnityEngine;
 public class CarUserControlMP : MonoBehaviour
 {
 	private CarController car;  // the car controller we want to use
-	private float baseSpeed;
-	private float baseTorque;
+	private bool nitro;
 	
-	public float speedFactor = 2;
+	public float speedFactor;
 
 	[SerializeField]
 	private string vertical = "Vertical";
@@ -19,8 +18,7 @@ public class CarUserControlMP : MonoBehaviour
 	{
 		// get the car controller
 		car = GetComponent<CarController>();
-		this.baseSpeed = this.car.MaxSpeed;
-		this.baseTorque = this.car.MaxTorque;
+		nitro = false;
 	}
 
 	void FixedUpdate()
@@ -35,12 +33,13 @@ public class CarUserControlMP : MonoBehaviour
 		#endif
 		car.Move(h,v);
 
-		if (CrossPlatformInput.GetButton ("Jump")) {
-			car.MaxSpeed = this.baseSpeed * this.speedFactor * 2;
-			car.MaxTorque = this.baseTorque * this.speedFactor;
+		if (Input.GetButton ("Jump")) {
+			if (!nitro) {
+				nitro = true;
+				this.car.Boost (speedFactor);
+			}
 		} else {
-			car.MaxSpeed = this.baseSpeed;
-			car.MaxTorque = this.baseTorque;
+			nitro = false;
 		}
 	}
 }

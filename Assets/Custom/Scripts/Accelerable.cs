@@ -6,7 +6,6 @@ public class Accelerable : MonoBehaviour {
 
     private CarController carController;
     private float baseSpeed;
-    private float baseTorque;
     private bool accelerating = false;
 
     public float accelTime = 2;
@@ -15,7 +14,6 @@ public class Accelerable : MonoBehaviour {
 	void Start () {
         this.carController = this.GetComponent<CarController>();
         this.baseSpeed = this.carController.MaxSpeed;
-        this.baseTorque = this.carController.MaxTorque;
 	}
 
     public IEnumerator Accelerate(float speedFactor)
@@ -32,7 +30,6 @@ public class Accelerable : MonoBehaviour {
         yield return new WaitForSeconds(this.accelTime);
 
         this.carController.MaxSpeed = this.baseSpeed;
-        this.carController.MaxTorque = this.baseTorque;
         this.accelerating = false;
     }
 }

@@ -122,6 +122,12 @@ public class CarController : MonoBehaviour
 
 	// variables added due to separating out things into functions!
 	bool anyOnGround;
+
+	public bool AnyOnGround
+	{
+		get { return anyOnGround; }
+	}
+
 	float curvedSpeedFactor;
 	bool reversing;
 	float targetAccelInput; // target accel input is our desired acceleration input. We smooth towards it later
