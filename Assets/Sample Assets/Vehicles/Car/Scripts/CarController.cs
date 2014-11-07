@@ -375,4 +375,9 @@ public class CarController : MonoBehaviour
 	{
 		immobilized = false;
 	}
+
+    public void Boost(float speedFactor)
+    {
+        this.rigidbody.AddRelativeForce(0, 0, speedFactor, ForceMode.VelocityChange );
+    }
 }

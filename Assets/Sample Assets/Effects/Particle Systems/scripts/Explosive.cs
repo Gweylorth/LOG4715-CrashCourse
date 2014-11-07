@@ -29,9 +29,16 @@ public class Explosive : MonoBehaviour {
 						Instantiate(explosionPrefab, col.contacts[0].point, Quaternion.LookRotation( col.contacts[0].normal ));
 						exploded = true;
 
-						//SendMessage ("Immobilize");
+                        CarController car = this.gameObject.GetComponent<CarController>();
+                        if (car)
+                        {
+                            car.SendMessage("Immobilize");
+                        }
+                        else
+                        {
+                            this.gameObject.SetActive(false);
+                        }
 
-                        this.gameObject.SetActive(false);
 
 						if (reset)
 						{

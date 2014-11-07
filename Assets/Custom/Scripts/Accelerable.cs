@@ -26,8 +26,8 @@ public class Accelerable : MonoBehaviour {
         }
 
         this.accelerating = true;
-        this.carController.MaxSpeed = this.baseSpeed * speedFactor * 2;
-        this.carController.MaxTorque = this.baseTorque * speedFactor;
+        this.carController.MaxSpeed = this.baseSpeed * speedFactor;
+        this.carController.Boost(speedFactor);
         
         yield return new WaitForSeconds(this.accelTime);
 

@@ -4,7 +4,7 @@ using System.Collections;
 [RequireComponent(typeof(BoxCollider))]
 public class Accelerator : MonoBehaviour {
 
-    public float speedFactor = 2;
+    public float speedFactor = 5;
 
     void OnTriggerEnter(Collider other)
     {
@@ -12,6 +12,11 @@ public class Accelerator : MonoBehaviour {
         if (accelerable)
         {
             StartCoroutine(accelerable.Accelerate(this.speedFactor));
+            AudioSource audio = this.gameObject.GetComponent<AudioSource>();
+            if (audio)
+            {
+                audio.Play();
+            }
         }
     }
 }
