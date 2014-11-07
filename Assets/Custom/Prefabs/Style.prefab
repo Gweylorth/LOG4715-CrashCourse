@@ -55,13 +55,18 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aac724435aea0984e8bf14c28219a403, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textPoint: {fileID: 0}
-  ajoutFrolage: 100
+  factorMinSpeed: .25
+  factorMaxSpeed: .850000024
+  ajoutFrolage: 10
+  ajoutVitesseFolle: 5
+  ajoutEnLAir: 5
+  ajoutExplosion: 100
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

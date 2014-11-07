@@ -13,7 +13,7 @@ public class Healing : MonoBehaviour
 					Destructible heal = other.GetComponentInParent<Destructible> ();
 					if (heal) {
 							renderer.enabled = false;
-							heal.healing (this.HP);
+							heal.Healing (this.HP);
 							StartCoroutine (Delay ());
 					}
 			}

@@ -717,13 +717,18 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1985907387}
   m_GameObject: {fileID: 21843951}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aac724435aea0984e8bf14c28219a403, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textPoint: {fileID: 0}
-  ajoutFrolage: 100
+  factorMinSpeed: .25
+  factorMaxSpeed: .850000024
+  ajoutFrolage: 10
+  ajoutVitesseFolle: 5
+  ajoutEnLAir: 5
+  ajoutExplosion: 100
 --- !u!65 &21843954
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5722,7 +5727,6 @@ MonoBehaviour:
   m_LightmapIndex: -1
   m_LightmapSize: 1024
   m_DrawTreesAndFoliage: 1
-  m_CollectDetailPatches: 1
   m_MaterialTemplate: {fileID: 0}
 --- !u!4 &227832305
 Transform:
@@ -6340,13 +6344,18 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 448657566}
   m_GameObject: {fileID: 266286497}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aac724435aea0984e8bf14c28219a403, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textPoint: {fileID: 0}
-  ajoutFrolage: 100
+  factorMinSpeed: .25
+  factorMaxSpeed: .850000024
+  ajoutFrolage: 10
+  ajoutVitesseFolle: 5
+  ajoutEnLAir: 5
+  ajoutExplosion: 100
 --- !u!65 &266286500
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8446,6 +8455,10 @@ Prefab:
       propertyPath: textPoint
       value: 
       objectReference: {fileID: 478268542}
+    - target: {fileID: 11400000, guid: ed684fc5858e5da4abd0178df1fd38de, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ed684fc5858e5da4abd0178df1fd38de, type: 2}
   m_RootGameObject: {fileID: 562357142}
@@ -10590,8 +10603,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 400010, guid: 031d08f52af1daa4f929b85221519426, type: 2}
-  healthPoints: 10
-  maxHealthPoints: 10
+  healthPoints: 5
+  maxHealthPoints: 5
 --- !u!65 &441196079
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11354,7 +11367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccf05cb758fa6ad40b25b08af07b77c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedFactor: 2
+  speedFactor: 25
   vertical: Vertical
   horizontal: Horizontal
 --- !u!54 &481286557
@@ -12633,7 +12646,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textPoint: {fileID: 478268542}
-  ajoutFrolage: 100
+  factorMinSpeed: .25
+  factorMaxSpeed: .850000024
+  ajoutFrolage: 10
+  ajoutVitesseFolle: 5
+  ajoutEnLAir: 5
+  ajoutExplosion: 100
 --- !u!1001 &570136978
 Prefab:
   m_ObjectHideFlags: 0
@@ -13362,6 +13380,14 @@ Prefab:
     - target: {fileID: 400000, guid: 44884af1ac1d64d42902da40268ba120, type: 2}
       propertyPath: m_LocalScale.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 44884af1ac1d64d42902da40268ba120, type: 2}
+      propertyPath: healthPoints
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 44884af1ac1d64d42902da40268ba120, type: 2}
+      propertyPath: maxHealthPoints
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 44884af1ac1d64d42902da40268ba120, type: 2}
@@ -18000,13 +18026,18 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1225654277}
   m_GameObject: {fileID: 805038096}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aac724435aea0984e8bf14c28219a403, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textPoint: {fileID: 0}
-  ajoutFrolage: 100
+  factorMinSpeed: .25
+  factorMaxSpeed: .850000024
+  ajoutFrolage: 10
+  ajoutVitesseFolle: 5
+  ajoutEnLAir: 5
+  ajoutExplosion: 100
 --- !u!65 &805038099
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22502,13 +22533,18 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1946913922}
   m_GameObject: {fileID: 957122924}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aac724435aea0984e8bf14c28219a403, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textPoint: {fileID: 0}
-  ajoutFrolage: 100
+  factorMinSpeed: .25
+  factorMaxSpeed: .850000024
+  ajoutFrolage: 10
+  ajoutVitesseFolle: 5
+  ajoutEnLAir: 5
+  ajoutExplosion: 100
 --- !u!65 &957122927
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22567,13 +22603,18 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 374136052}
   m_GameObject: {fileID: 958174103}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aac724435aea0984e8bf14c28219a403, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textPoint: {fileID: 0}
-  ajoutFrolage: 100
+  factorMinSpeed: .25
+  factorMaxSpeed: .850000024
+  ajoutFrolage: 10
+  ajoutVitesseFolle: 5
+  ajoutEnLAir: 5
+  ajoutExplosion: 100
 --- !u!65 &958174106
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24975,8 +25016,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 400010, guid: 031d08f52af1daa4f929b85221519426, type: 2}
-  healthPoints: 10
-  maxHealthPoints: 10
+  healthPoints: 5
+  maxHealthPoints: 5
 --- !u!65 &1073368421
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26007,6 +26048,14 @@ Prefab:
     - target: {fileID: 400000, guid: 44884af1ac1d64d42902da40268ba120, type: 2}
       propertyPath: m_LocalScale.y
       value: .569999993
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 44884af1ac1d64d42902da40268ba120, type: 2}
+      propertyPath: maxHealthPoints
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 44884af1ac1d64d42902da40268ba120, type: 2}
+      propertyPath: healthPoints
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 44884af1ac1d64d42902da40268ba120, type: 2}
@@ -30782,13 +30831,18 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 590580622}
   m_GameObject: {fileID: 1230457285}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aac724435aea0984e8bf14c28219a403, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textPoint: {fileID: 0}
-  ajoutFrolage: 100
+  factorMinSpeed: .25
+  factorMaxSpeed: .850000024
+  ajoutFrolage: 10
+  ajoutVitesseFolle: 5
+  ajoutEnLAir: 5
+  ajoutExplosion: 100
 --- !u!65 &1230457288
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33891,13 +33945,18 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1640622650}
   m_GameObject: {fileID: 1380286828}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aac724435aea0984e8bf14c28219a403, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textPoint: {fileID: 0}
-  ajoutFrolage: 100
+  factorMinSpeed: .25
+  factorMaxSpeed: .850000024
+  ajoutFrolage: 10
+  ajoutVitesseFolle: 5
+  ajoutEnLAir: 5
+  ajoutExplosion: 100
 --- !u!65 &1380286831
 BoxCollider:
   m_ObjectHideFlags: 0

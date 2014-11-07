@@ -20,20 +20,22 @@ public class Destructible : MonoBehaviour {
 		} else{
 			this.healthPoints -= velocity;
 		}
-		if (offender.healthPoints - velocity < 0) {
-			offender.healthPoints = 0;
-		} else{
-			offender.healthPoints -= velocity;
-		}
 
-		if(this.healthPoints == 0){
+		if(this.healthPoints == 0) {
             Explosive explosive = this.gameObject.AddComponent<Explosive>();
-            explosive.explosionPrefab = explosionPrefab;
-            return;
+			if(explosive) {
+				explosive.explosionPrefab = explosionPrefab;
+			}
         }
+		if (offender.healthPoints - velocity <= 0) {
+			Style car = this.gameObject.GetComponentInChildren<Style>();
+			if(car) {
+				car.AddExplosionPoints();
+			}
+		}
 	}
 
-	public void healing(int HP)
+	public void Healing(int HP)
 	{
 		if (this.healthPoints + HP < this.maxHealthPoints) {
 			this.healthPoints += HP;
