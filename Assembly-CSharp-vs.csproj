@@ -54,11 +54,14 @@
      <Compile Include="Assets\Cadriciel\Scripts\StartScreenManager.cs" />
      <Compile Include="Assets\Custom\Scripts\Accelerable.cs" />
      <Compile Include="Assets\Custom\Scripts\Accelerator.cs" />
+     <Compile Include="Assets\Custom\Scripts\Boost.cs" />
      <Compile Include="Assets\Custom\Scripts\Destructible.cs" />
      <Compile Include="Assets\Custom\Scripts\HPText.cs" />
      <Compile Include="Assets\Custom\Scripts\Healing.cs" />
+     <Compile Include="Assets\Custom\Scripts\OutOfBounds.cs" />
      <Compile Include="Assets\Custom\Scripts\Rotator.cs" />
      <Compile Include="Assets\Custom\Scripts\SpeedText.cs" />
+     <Compile Include="Assets\Custom\Scripts\Style.cs" />
      <Compile Include="Assets\Sample Assets\2D\Scripts\Camera2DFollow.cs" />
      <Compile Include="Assets\Sample Assets\2D\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Sample Assets\2D\Scripts\Platformer2DUserControl.cs" />
@@ -152,7 +155,6 @@
      <Compile Include="Assets\Sample Assets\Vehicles\Car\Scripts\Wheel.cs" />
      <Compile Include="Assets\Sample Assets\Vehicles\Rolling Ball\Scripts\Ball.cs" />
      <Compile Include="Assets\Sample Assets\Vehicles\Rolling Ball\Scripts\BallUserControl.cs" />
-     <Compile Include="Assets\Style.cs" />
      <None Include="Assets\Sample Assets\Effects\Toon Shading\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Sample Assets\Prototyping\Shaders\WorldCoord Diffuse.shader" />
      <None Include="Assets\Boltset\readme.txt" />

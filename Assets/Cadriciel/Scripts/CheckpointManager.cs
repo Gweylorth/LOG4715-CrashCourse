@@ -58,11 +58,12 @@ public class CheckpointManager : MonoBehaviour
 					{
 						if(car.gameObject.name == "Joueur 1") {							
 							lapsTextP1.text = "Tour " + (carData.lap+1) + "/" + _totalLaps;
+							GetComponent<RaceManager>().Announce("Tour " + (carData.lap+1).ToString(), 1);
 						}
 						else if(car.gameObject.name == "Joueur 2") {							
 							lapsTextP2.text = "Tour " + (carData.lap+1) + "/" + _totalLaps;
+							GetComponent<RaceManager>().Announce("Tour " + (carData.lap+1).ToString(), 2);
 						}
-						GetComponent<RaceManager>().Announce("Tour " + (carData.lap+1).ToString());
 					}
 					
 					if (carData.lap >= _totalLaps)

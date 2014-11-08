@@ -42,7 +42,10 @@ public class Explosive : MonoBehaviour {
 
 						if (reset)
 						{
-							GetComponent<ObjectResetter>().DelayedReset(resetTimeDelay);
+							ObjectResetter solid = this.gameObject.GetComponent<ObjectResetter>();
+							if(solid) {
+								solid.DelayedReset(resetTimeDelay);
+							}
 						}
 
 

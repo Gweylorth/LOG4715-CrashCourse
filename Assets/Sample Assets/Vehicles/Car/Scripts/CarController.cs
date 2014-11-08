@@ -59,7 +59,7 @@ public class CarController : MonoBehaviour
 
 	// publicly read-only props, useful for GUI, Sound effects, etc.
 	public int GearNum { get; private set; }                                        // the current gear we're in.
-	public float CurrentSpeed { get; private set; }                                 // the current speed of the car
+	public float CurrentSpeed { get; set; }                                 		// the current speed of the car
 	public float CurrentSteerAngle{ get; private set; }                             // The current steering angle for steerable wheels.
 	public float AccelInput { get; private set; }                                   // the current acceleration input
 	public float BrakeInput { get; private set; }                                   // the current brake input

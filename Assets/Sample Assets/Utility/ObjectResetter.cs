@@ -42,15 +42,14 @@ public class ObjectResetter : MonoBehaviour {
 			rigidbody.velocity = Vector3.zero;
 			rigidbody.angularVelocity = Vector3.zero;
 		}
-
-        Destructible destructible = this.gameObject.GetComponent<Destructible>();
-        if (destructible)
-        {
-            destructible.healthPoints = destructible.maxHealthPoints;
-        }
 		
-		SendMessage("Reset");
+		Destructible destructible = this.gameObject.GetComponent<Destructible>();
+		if (destructible)
+		{
+			destructible.healthPoints = destructible.maxHealthPoints;
+		}
 
+		SendMessage("Reset");
 	}
 }
 
