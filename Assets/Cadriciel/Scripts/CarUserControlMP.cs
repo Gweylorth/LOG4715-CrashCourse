@@ -17,7 +17,7 @@ public class CarUserControlMP : MonoBehaviour
 	[SerializeField]
 	private string jump = "Jump";
 	
-	void Awake ()
+	void Start ()
 	{
 		// get the car controller
 		car = GetComponent<CarController>();

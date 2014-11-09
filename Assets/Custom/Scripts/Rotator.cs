@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// Apply rotation on nuts
 public class Rotator : MonoBehaviour {
 
 	// Update is called once per frame

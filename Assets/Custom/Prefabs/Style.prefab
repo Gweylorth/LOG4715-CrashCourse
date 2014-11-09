@@ -63,6 +63,7 @@ MonoBehaviour:
   textPoint: {fileID: 0}
   factorMinSpeed: .25
   factorMaxSpeed: .850000024
+  seuilPointsBoost: 1000
   ajoutFrolage: 10
   ajoutVitesseFolle: 5
   ajoutEnLAir: 5

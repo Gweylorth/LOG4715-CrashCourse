@@ -1,19 +1,25 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// Replace cars on track
 public class OutOfBounds : MonoBehaviour {
 
+	// Tag to find players
     public string tagToFind = "Player";
+	// Id of the section where the car is
     public int sectionId;
 
+	// Called when the collider enters the trigger
     void OnTriggerEnter(Collider other)
     {
+		// Find the car
         Transform baseParent = other.transform.parent.parent;
         if (baseParent.tag != this.tagToFind)
         {
             return;
         }
 
+		// Configure booleans to prove that car is on track
         ObjectResetter resetter = baseParent.GetComponent<ObjectResetter>();
         if (resetter)
         {
@@ -28,14 +34,17 @@ public class OutOfBounds : MonoBehaviour {
         }
     }
 
+	// Called when the collider has stopped touching the trigger
     void OnTriggerExit(Collider other)
     {
+		// Find the car
         Transform baseParent = other.transform.parent.parent;
         if (baseParent.tag != this.tagToFind)
         {
             return;
         }
 
+		// Search for booleans to know if car quits track
         ObjectResetter resetter = baseParent.GetComponent<ObjectResetter>();
         if (resetter)
         {
@@ -49,6 +58,7 @@ public class OutOfBounds : MonoBehaviour {
             }
         }
 
+		// Replace the car on the respawn point
         Transform respawn = this.transform.FindChild("RespawnPoint");
         baseParent.position = respawn.position;
         baseParent.rotation = respawn.rotation;

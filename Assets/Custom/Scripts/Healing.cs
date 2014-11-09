@@ -1,27 +1,33 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(SphereCollider))]
-public class Healing : MonoBehaviour
-{
+// Provides healing to nuts
+public class Healing : MonoBehaviour {
+
+	// Spawn time
 	public float spawnTime = 2;
+	// Number of HP recovered
 	public int HP;
 	
+	// Called when the collider enters the trigger
 	void OnTriggerEnter (Collider other)
 	{
-			if (renderer.enabled) {
-					Destructible heal = other.GetComponentInParent<Destructible> ();
-					if (heal) {
-							renderer.enabled = false;
-							heal.Healing (this.HP);
-							StartCoroutine (Delay ());
-					}
+		// If nut is active
+		if (renderer.enabled) {
+			Destructible heal = other.GetComponentInParent<Destructible> ();
+			if (heal) {
+				renderer.enabled = false;
+				// Heal car
+				heal.Healing (this.HP);
+				StartCoroutine (Delay ());
 			}
+		}
 	}
 	
+	// Desactivate nut during a spawn time
 	IEnumerator Delay ()
 	{
-			yield return new WaitForSeconds (spawnTime);
-			renderer.enabled = true;
+		yield return new WaitForSeconds (spawnTime);
+		renderer.enabled = true;
 	}
 }
