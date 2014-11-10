@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class CarController : MonoBehaviour
 {
@@ -382,8 +383,18 @@ public class CarController : MonoBehaviour
 		immobilized = false;
 	}
 
-    public void Boost(float speedFactor)
+    public void Boost(float speedFactor, float boostTime = 2f)
     {
         this.rigidbody.AddRelativeForce(0, 0, speedFactor, ForceMode.VelocityChange );
+        StartCoroutine(BoostEffect(boostTime));
+    }
+
+    private IEnumerator BoostEffect(float effectLength)
+    {
+        this.transform.FindChild("Flame").gameObject.SetActive(true);
+
+        yield return new WaitForSeconds(effectLength);
+
+        this.transform.FindChild("Flame").gameObject.SetActive(false);
     }
 }
