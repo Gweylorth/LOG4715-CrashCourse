@@ -3,9 +3,6 @@
 *.csproj
 *.pidb
 *.unityproj
-/Library/FailedAssetImports.txt
-/Library/cache/
-/Library/previews/
-/Library/ScriptAssemblies
+/Library
 /obj
 /Temp
