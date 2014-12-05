@@ -4,5 +4,7 @@
 *.pidb
 *.unityproj
 /Library
+/Library/*
 /obj
 /Temp
+
