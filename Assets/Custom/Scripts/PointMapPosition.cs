@@ -5,7 +5,10 @@ public class PointMapPosition : MonoBehaviour {
 	
 	// GameObject Car
 	[SerializeField]
-	private CarController car;
+	private GameObject car;
+    // Point color, should be same as car
+    [SerializeField]
+    private Color color;
 	// Height
 	[SerializeField]
 	private float height;
@@ -17,13 +20,16 @@ public class PointMapPosition : MonoBehaviour {
 	private float offsetZ;
 
 	void Start() {
+        if (!this.car.activeSelf)
+        {
+            this.gameObject.SetActive(false);
+        }
 		this.gameObject.transform.position = new Vector3(offsetX, height, offsetZ);
+        this.gameObject.renderer.material.color = this.color;
 	}
 
 	// Update is called once per frame
 	void Update () {
-		if(car.enabled){
-			this.gameObject.transform.position = new Vector3(car.transform.position.x, height, car.transform.position.z); 
-		}
+		this.gameObject.transform.position = new Vector3(car.transform.position.x, height, car.transform.position.z); 
 	}
 }

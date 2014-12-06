@@ -11,7 +11,7 @@ GameObject:
   - 23: {fileID: 2300000}
   - 114: {fileID: 11400000}
   - 33: {fileID: 3300000}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: PointMap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: f7850d9a21e5b2c468468b114e902e25, type: 2}
+  - {fileID: 2100000, guid: 0d0a1e0de608f7a49acf3a85347688a1, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -69,7 +69,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   car: {fileID: 0}
+  color: {r: .254901975, g: .219607845, b: .200000003, a: 0}
   height: 400
+  offsetX: 1000
+  offsetZ: 1000
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

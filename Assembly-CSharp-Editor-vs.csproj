@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{CF127DC4-1440-A6A5-923E-F2E10223682D}</ProjectGuid>
+	<ProjectGuid>{D6D6601A-1396-4F16-5D36-341E7C544B85}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -90,7 +90,7 @@
      <None Include="Assets\Sample Assets\Effects\Tessellation Shaders\Shaders\BumpedSpecularDisplacement.shader" />
      <None Include="Assets\Sample Assets\Effects\Light Shafts\Shaders\ColorFilter.shader" />
  <Reference Include="Assembly-UnityScript">
- <HintPath>C:/Users/Eric/Documents/GitHub/LOG4715-CrashCourse/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
+ <HintPath>C:/Users/Gwaihir/Documents/GitHub/LOG4715-SaladeTomateOignon/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
@@ -98,7 +98,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-vs.csproj">
-      <Project>{118F1A16-BCDB-09CD-CC9B-7DE15DBDEAD9}</Project>      <Name>Assembly-CSharp-vs</Name>    </ProjectReference>
+      <Project>{CCB1639B-F043-8B23-501D-73146889E93D}</Project>      <Name>Assembly-CSharp-vs</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
