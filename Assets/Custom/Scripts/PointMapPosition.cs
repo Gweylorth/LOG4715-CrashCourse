@@ -20,7 +20,7 @@ public class PointMapPosition : MonoBehaviour {
 	private float offsetZ;
 
 	void Start() {
-        if (!this.car.activeSelf)
+        if (!this.car.activeInHierarchy)
         {
             this.gameObject.SetActive(false);
         }
